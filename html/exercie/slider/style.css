@@ -1,0 +1,76 @@
+.container {
+    flex: 1 0;
+    padding: 32px;
+  }
+   
+  .slider-container {
+    position: relative;
+  }
+   
+  .container ul {
+    /* background: lightgray; */
+    scroll-behavior: smooth;
+    gap: 16px;
+    padding: 16px;
+    overflow: auto;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+  }
+   
+  .container ul li {
+    /* flex: 1 calc(100% / 4); */
+    /* flex-shrink: 0; */
+    scroll-snap-align: center;
+  }
+   
+  .card {
+    box-shadow: 0 2px 2px 0 rgba(232, 230, 230, 0.14),
+      0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  }
+   
+  .header {
+    padding: 16px;
+    background: aliceblue;
+  }
+   
+  .body {
+    padding: 16px;
+  }
+   
+  .arrow {
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    border-radius: 50px;
+    justify-content: center;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+  }
+   
+  .arrow.disabled {
+    opacity: 0.4;
+  }
+   
+  .arrow.left {
+    left: 16px;
+  }
+   
+  .arrow.right {
+    right: 16px;
+  }
+   
+  .arrow:before {
+    color: white;
+  }
+   
+  .arrow.left:before {
+    content: "<-";
+  }
+   
+  .arrow.right:before {
+    content: "->";
+  }

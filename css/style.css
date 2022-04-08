@@ -1,0 +1,604 @@
+/*Génériques éléments*/
+
+h2 {
+    font-family: 'Gotu', sans-serif;
+}
+
+@media screen and (max-width: 530px) {
+    h2 {
+        font-size: 27px;
+    }
+
+}
+
+p {
+    font-family: 'Gotu', sans-serif;
+}
+
+
+body {
+    scroll-behavior: smooth;
+    transition: 0.2s linear;
+}
+/*******Navigation bar****/
+.header {
+    background-color: rgba(65, 63, 158, 1);
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    padding-top: 0px;
+    z-index: 10;
+    border: 1px solid black;
+    top: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        position: initial;
+        height: fit-content;
+        box-shadow: 2px 1px 1px #333;
+    
+    }
+
+}
+
+.header-container .nav-bar {
+    display: flex;
+    gap: 5vw;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 10px;
+    width: 70%;
+    
+
+}
+@media screen and (max-width: 900px) {
+    .header-container .nav-bar {
+        justify-content: flex-start;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        gap:5px;
+        
+    }
+
+}
+
+
+.header-container .nav-bar li {
+    justify-items: center;
+    margin-top: 1em;
+    
+
+}
+
+.header-container .nav-bar li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gotu', sans-serif;
+
+}
+
+li:hover {
+    background-color: rgb(74, 23, 90, 0.4);
+    height: 45px;
+    border-radius: 50%;
+}
+
+.toggle {
+    right: 2rem;
+    top: 2rem;
+    position: absolute;
+}
+.checkbox{
+    display: none;
+}
+
+.label{
+    height: 32px;
+  width: 65px;
+  background: rgb(74, 23, 90, 0.4);
+  padding: 5px 8px;
+  border-radius: 50px;
+  cursor:pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 2px 1px 1px #333;
+}
+
+
+
+.label .ball {
+    background: rgb(74, 23, 90, 1);
+    border-radius: 50%;
+    height: 29px;
+    width: 29px;
+    top: 2px;
+    left: 5px;
+    transform: translateX(0px);
+    transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
+    position: absolute;
+  }
+
+  .checkbox:checked + .label .ball {
+    transform: translateX(29px);
+  }
+  .fa-moon {
+    color: #333;
+    
+  }
+
+  /***barre de  % du site***/
+.loader {
+
+    bottom: 0;
+    left: 0;
+    height: 8px;
+    position: absolute;
+    transition: 0.3s ease-out;
+    background-color: #a00a7a;
+  
+}
+
+/*******Background section 1****/
+.container-background {
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+}
+
+section:first-of-type {
+    text-transform: uppercase;
+    background-image: url(../html/svg/background.svg);
+
+}
+/*******Titre flotant****/
+.title {
+
+    background-color: rgba(16, 24, 36, 0.70);
+    border-radius: 50px;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 2vw;
+    box-shadow: 1px 2px 6px #333;
+
+}
+
+.title h1 {
+    font-size: 28px;
+    color: white;
+    font-family: 'Gotu', sans-serif;
+
+}
+/*******Section présentation descriptif et photo de profil****/
+.presentation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+@media screen and (max-width: 900px) {
+    .presentation {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        width: fit-content;
+        margin-right: 0;
+    }
+}
+
+.presentation div {
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    background-color: white;
+    margin: 2vw;
+}
+
+
+.img-profil {
+    height: 50vh;
+    gap: 1em;
+    z-index: 2;
+    box-shadow: 1px 2px 6px #333;
+
+}
+
+.paragraphe {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Gotu', sans-serif;
+
+}
+/*******Section background 2****/
+section:nth-of-type(3) {
+    text-transform: uppercase;
+    background-image: url(../html/svg/dragon.svg);
+}
+
+/*******Bouton cv****/
+.container-curriculum {
+    background-color: rgba(65, 63, 158, 1);
+    border-radius: 50%;
+    height: 100px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translate(45vw, -5vh);
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 1px 2px 6px #333;
+}
+
+@media screen and (max-width: 900px) {
+    .container-curriculum {
+        transform: translate(40vw, -5vh);
+    }
+
+}
+
+
+
+.container-curriculum a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Gotu', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-curriculum:hover {
+    background-color: rgb(74, 23, 90, 0.7);
+}
+/*******Mes notions vues en cours encart****/
+.incarnate {
+    background-color: rgba(65, 63, 158, 1);
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    transform: translate(25vw, 0);
+    box-sizing: border-box;
+    margin: 10px;
+    box-shadow: 1px 2px 6px #333;
+}
+
+
+.incarnate p {
+    color: white;
+    font-size: 24px;
+}
+/*******Icone des logos****/
+.container-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    margin-top: 4vh;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.container-icons div {
+    width: 200px;
+    height: 200px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .container-icons div {
+        width: 150px;
+        height: 150px;
+    }
+
+}
+/*******Menu déroulant mes compétences****/
+.myskills {
+
+    align-items: center;
+    position: relative;
+
+
+}
+
+.skills {
+    margin: 5vh;
+    background-color: rgba(65, 63, 158, 1);
+    width: fit-content;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    box-shadow: 1px 2px 6px #333;
+
+}
+
+@media screen and (max-width: 900px) {
+    .skills {
+        width: fit-content;
+        font-size: 20px;
+    }
+
+}
+
+.skills>span {
+    font-family: 'Gotu', sans-serif;
+}
+
+.skills:hover {
+    background-color: rgb(74, 23, 90, 0.7);
+}
+
+.all-skills:hover,
+.skills:hover+.all-skills {
+    transform: scale(1);
+}
+
+.all-skills {
+    transform: scale(0);
+    transform-origin: top center;
+    transition: transform 0.5s linear;
+    top: -10px;
+    width: 400px;
+    position: relative;
+    gap: 10px;
+}
+
+.all-skills .card {
+    background-color: rgba(65, 63, 158, 1);
+    border-radius: 50px;
+    color: white;
+    align-items: center;
+    box-shadow: 1px 2px 6px black;
+
+}
+
+
+/*******Footer********/
+
+
+.footer-distributed {
+  background-color: rgba(65, 63, 158, 1);
+  box-shadow: 0 1px 1px 0 rgb(0, 0, 0);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 45px 50px;
+  display: inline-block;
+  height: 40vh;
+  text-align: center;
+  text-decoration: none;
+  bottom: -100px;
+
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(74, 23, 90, 1);
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+  box-shadow: 1px 2px 6px black;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+}
+
+.footer-right p{
+    color: white;
+    text-align: center;
+    font-family: 'Gotu', sans-serif;
+    font-size: 20px;
+}
+
+/*******Ancre qui apparait a 900px de width pour revenir en haut du site****/
+
+@media screen and (max-width: 900px) and (min-width: 340px) {
+.container_return_nav-bar{
+    width:70px;
+    background-color: rgba(65, 63, 158, 1);
+    height:70px;
+    text-align:center;
+    border-radius:100px;
+    justify-content: center;
+    position: fixed;
+    display: flex;
+    z-index: 20;
+    top: 350px;
+    right: 25px;
+    border: 1px solid black;
+}
+ }
+
+ @media screen and (min-width: 900px) {
+    .container_return_nav-bar{
+        display: none;
+    }
+     }
+     
+    
+
+.return_nav-bar{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+
+
+/****Dark MODE menu ajoute les class via le script js****/
+.dark {
+    background-color: #333;
+  }
+
+.dark p {
+    color: white;
+}
+/****Dark MODE menu sur le header****/
+.dark header{
+    background-color:rgb(170, 155, 22) ;
+    box-shadow: 1px 2px 6px #333;
+  }
+.dark .header-container .nav-bar li a{
+    color: black;
+}
+
+.dark li:hover{
+    background-color: rgba(148, 127, 9, 0.5);
+    border-radius: 50%;
+    
+}
+
+/****Dark MODE menu sur le le bouton de change mode****/
+.dark .label {
+    box-shadow: 2px 1px 1px #000000;
+    background: rgb(187, 168, 2);
+  }
+
+  .dark .ball {
+    background: #060701;
+  }
+
+/****Dark mode sur la section de présentation****/
+
+  .dark .presentation {
+    background-color: #333;
+  }
+  
+.dark h2{
+    color: white;
+}
+  .dark .light{
+      background-color: #333;
+  }
+  
+/****Dark mode sur le bouton du CV****/
+  .dark .container-curriculum{
+      background-color: rgb(170, 155, 22);
+      box-shadow: 1px 2px 6px black;
+  }
+  .dark .container-curriculum a {
+      color: black;
+  }
+
+  .dark .container-curriculum:hover{
+      background-color: rgba(148, 127, 9, 1);
+  }
+/****Dark mode sur l'encart des notions vue en cours****/
+  .dark .incarnate{
+      background-color: rgb(170, 155, 22);
+      box-shadow: 1px 2px 6px black;
+  }
+
+  .dark .incarnate p {
+      color: black;
+  }
+
+/****Dark mode sur mes compétences et son menu déroulant****/
+  .dark .skills>span{
+      background-color: rgb(170, 155, 22);
+      color:black;
+      box-shadow: 1px 2px 6px black;
+  }
+
+  .dark .skills>span:hover{
+      background-color: rgba(148, 127, 9, 1);
+  }
+
+  .dark .card {
+      background-color:rgb(170, 155, 22);
+      box-shadow: 1px 2px 6px black;
+      
+  }
+  .dark .card p{
+    color: black;
+  }
+
+/****Dark mode sur les backgrounds****/
+
+  .dark section:first-of-type {
+      background-image: url(../html/svg/background2.svg);
+  }
+
+  .dark section:nth-of-type(3){
+background-image: url(../html/svg/dragon2.svg);
+  }
+
+/****Dark mode sur l'ancre dui permet un fast return a 900px de width
+'****/
+  .dark .container_return_nav-bar{
+      background-color: rgb(187, 168, 2);
+  }
+
+  .dark .return_nav-bar{
+      color: black;
+  }
+
+
+  .dark .loader{
+      background-color: black;
+  }
+
+/****dark MODE Footer****/
+  .dark .footer-distributed{
+    background-color:rgb(170, 155, 22);
+  }
+
+  .dark .footer-right a{
+      background: rgb(187, 168, 2);
+      color: black;
+      box-shadow: 1px 2px 6px black;
+  }
+
+  .dark  .footer-right p{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Gotu', sans-serif;
+    
+}

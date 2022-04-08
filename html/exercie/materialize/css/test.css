@@ -1,0 +1,25 @@
+.blue {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    
+    
+}
+
+.red {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: all 1s;
+    position: absolute;
+}
+
+
+/* Pour gagner des lignes */
+.blue:hover + .red, .red:hover{
+    transform: scale(1);
+    
+  }
+
