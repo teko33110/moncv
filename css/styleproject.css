@@ -94,7 +94,7 @@ li:hover {
 .label {
   height: 23px;
   width: 50px;
-  background: violet;
+  background: rgb(74, 23, 90, 0.4);;
   padding: 5px 8px;
   border-radius: 50px;
   cursor: pointer;
