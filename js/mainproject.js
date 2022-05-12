@@ -5,7 +5,7 @@ const main = () => {
     
   });
 
-};
+
 
 class Carousel{
 
@@ -187,9 +187,5 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true
   })
 })
-
-
-
-
-
+};
 addEventListener("load", main);
