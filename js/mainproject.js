@@ -3,9 +3,6 @@ const main = () => {
   darkMode.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     
-  });
-
-
 
 class Carousel{
 
@@ -187,5 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
     loop: true
   })
 })
+});
 };
 addEventListener("load", main);
