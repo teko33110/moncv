@@ -1,3 +1,12 @@
+const main = () => {
+  const darkMode = document.getElementById("dark-mode");
+  darkMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    
+  });
+
+};
+
 class Carousel{
 
   /**
@@ -12,7 +21,10 @@ class Carousel{
   * @param {OPbject} [options.slidesVisible = 1] Nombre d'éléments visible dans un slide
   * @param {booolean} [options.loop = false] Doit-t-on boucler en fin de slide
   */
-
+  
+  
+    
+  
   constructor (element, options = {}){
     this.element = element
     this.options = Object.assign({}, {
@@ -166,6 +178,7 @@ class Carousel{
   }
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 
   new Carousel(document.querySelector('#carousel1'), {
@@ -175,7 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-const darkMode = document.getElementById("dark-mode");
-darkMode.addEventListener("click", () => {
-document.body.classList.toggle("dark");
-});
+
+
+
+
+addEventListener("load", main);
