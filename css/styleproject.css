@@ -17,10 +17,7 @@ html {
 
 body {
   scroll-behavior: smooth;
-  transition: 0.2s linear;
   font-family: sans-serif;
-  padding: 0 50px 50px;
-  line-height: 1.4;
   background-color: rgba(24, 24, 146, 0.986);
   line-height: 1.4;
 }
@@ -92,8 +89,8 @@ li:hover {
 }
 
 .label {
-  height: 23px;
-  width: 50px;
+  height: 32px;
+  width: 65px;
   background: black;
   padding: 5px 8px;
   border-radius: 50px;
