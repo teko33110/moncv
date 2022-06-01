@@ -306,6 +306,8 @@ section:nth-of-type(3) {
     margin-top: 4vh;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0 6px #333;
 
 }
 
