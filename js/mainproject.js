@@ -174,7 +174,7 @@ class Carousel{
 document.addEventListener('DOMContentLoaded', function () {
 
   new Carousel(document.querySelector('#carousel1'), {
-    slidesVisible: 2,
+    slidesVisible: 3,
     slidesToScroll: 1,
     loop: true
   })
